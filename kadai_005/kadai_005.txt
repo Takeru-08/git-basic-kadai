@@ -1,0 +1,76 @@
+tukmr@FFXIV08 MINGW64 ~
+$ mkdir git_challenge
+
+tukmr@FFXIV08 MINGW64 ~
+$ cd git_challenge
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge
+$ git init
+Initialized empty Git repository in C:/Users/tukmr/git_challenge/.git/
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ touch hello_world.txt
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ ls
+hello_world.txt
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ echo "Hello, world!" >> hello_world.txt
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ cat hello_world.txt
+Hello, world!
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ git commit -m "hello_world.txtを追加"
+[main (root-commit) a8509e9] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ echo "こんにちは、　世界！" >> hollo_world.txt
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ cat hello_world.txt
+Hello, world!
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ git rm hollo_world.txt
+fatal: pathspec 'hollo_world.txt' did not match any files
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ rm hollo_world.txt
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ ls
+hello_world.txt
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ echo "こんにちは、　世界！" >> hello_world.txt
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ cat hello_world.txt
+Hello, world!
+こんにちは、　世界！
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ git commit -m "日本語訳を追記"
+[main 65f187b] 日本語訳を追記
+ 1 file changed, 1 insertion(+)
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$ git log --oneline
+65f187b (HEAD -> main) 日本語訳を追記
+a8509e9 hello_world.txtを追加
+
+tukmr@FFXIV08 MINGW64 ~/git_challenge (main)
+$
